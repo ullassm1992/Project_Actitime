@@ -3,4 +3,52 @@
   <groupId>com.actiTime</groupId>
   <artifactId>Actitime</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <build>
+   <plugins>
+     <plugin>
+       <groupId>org.apache.maven.plugins</groupId>
+       <artifactId>maven-surefire-plugin</artifactId>
+       <version>3.0.0-M5</version>
+        <configuration>
+          <suiteXMLfiles>
+             <suiteXMLfile>testng.xml</suiteXMLfile>
+          </suiteXMLfiles>
+        </configuration>
+      </plugin>
+     </plugins>
+   </build>       
+  
+  <dependencies>
+  <dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>3.141.59</version>
+  </dependency>
+  <dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>4.1.2</version>
+ </dependency>
+ <dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>4.1.2</version>
+ </dependency>
+ <dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml-schemas</artifactId>
+    <version>4.1.2</version>
+ </dependency>
+ <dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.7</version>
+ </dependency>
+ <dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.3.0</version>
+    <scope>test</scope>
+ </dependency>
+  </dependencies>
 </project>
