@@ -12,6 +12,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 public class BaseTest implements IAutoConstant
@@ -27,8 +28,8 @@ public class BaseTest implements IAutoConstant
 	
 	
 	@BeforeClass
-	@Parameters({"browser"})
-	public  void openbrowser(String browser)
+	@Parameters(value={"browser"})
+	public  void openbrowser(@Optional ("chrome") String browser)
 	{
 	 	if (browser.equals("chrome"))
 		{
